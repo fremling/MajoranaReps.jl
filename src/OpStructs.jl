@@ -4,7 +4,15 @@ end
 println(TabLevel*"Open OpStructs.jl")
 TabLevel=TabLevel*"    "
 
-if isdefined(Main,:MathLink)
+
+###Check if Mathlink is installed
+using Pkg
+InstalledPackages=(Pkg.installed()).keys
+HasMathLink=any([ isassigned(InstalledPackages,n) ?
+                  (InstalledPackages[n] == "MathLink") :
+                  false for n in 1:length(InstalledPackages) ])
+if HasMathLink
+    using MathLink ###if Mathlink is present also load it...
     WSym = MathLink.WSymbol
     WExpr = MathLink.WExpr
     Scalars=Union{Number,OpSqrt,WSym,WExpr}

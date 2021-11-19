@@ -1,7 +1,8 @@
 
 using MathLink
+using MathLinkExtras
 
-include("MajoranaReps.jl")
+using MajoranaReps
 
 using Test
 

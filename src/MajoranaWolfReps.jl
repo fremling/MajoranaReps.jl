@@ -4,7 +4,7 @@ end
 println(TabLevel*"Open MajoranaWolfReps.jl")
 TabLevel=TabLevel*"    "
 
-if isdefined(Main,:MathLink) ###Extra Math Link dependents
+if HasMathLink ###Extra Math Link dependents
 
     using MathLinkExtras
     
@@ -17,7 +17,6 @@ if isdefined(Main,:MathLink) ###Extra Math Link dependents
     end
     
 end
-
 
 
 TabLevel=TabLevel[1:end-4]
