@@ -4,13 +4,13 @@ end
 println(TabLevel*"Open OpStructs.jl")
 TabLevel=TabLevel*"    "
 
-
-include("ML/MathLinkHeader.jl")
-
-WSym = MathLink.WSymbol
-WExpr = MathLink.WExpr
-
-Scalars=Union{Number,OpSqrt,WSym,WExpr}
+if isdefined(Main,:MathLink)
+    WSym = MathLink.WSymbol
+    WExpr = MathLink.WExpr
+    Scalars=Union{Number,OpSqrt,WSym,WExpr}
+else
+    Scalars=Union{Number,OpSqrt}
+end
 
 
 
