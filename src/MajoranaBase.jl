@@ -1,3 +1,5 @@
+module MathLinkExtras
+
 if !@isdefined(TabLevel)
     TabLevel = ""
 end
@@ -88,3 +90,5 @@ end
 
 TabLevel=TabLevel[1:end-4]
 println(TabLevel*"Close MajornaBase.jl")
+
+end #Module
