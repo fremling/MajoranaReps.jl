@@ -1,7 +1,10 @@
 module MajoranaReps
 
 
-export bx,by,bz,c,Sx,Sy,Sz,Ket
+export bx,by,bz,c,Sx,Sy,Sz,Ket, Down, Up
+export OpSqrt, OpToStr, OpScaleType, OpProp, OpScale, OpAdd
+export MajElem, MajScalar, MajoranaOp, OpReduce, ParityOp
+export OpNonComutes, OpComutes, OpInnerProd, Majorana, MajoranaSp
 
 
 if !@isdefined(TabLevel)

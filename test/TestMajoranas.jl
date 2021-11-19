@@ -1,5 +1,6 @@
-include("MajoranaReps.jl")
+#include("MajoranaReps.jl")
 
+using MajoranaReps
 using Test
 
 @testset "Weird sites" begin
