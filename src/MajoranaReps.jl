@@ -1,6 +1,9 @@
 module MajoranaReps
 
 
+export bx,by,bz,c,Sx,Sy,Sz,Ket
+
+
 if !@isdefined(TabLevel)
     TabLevel = ""
 end
