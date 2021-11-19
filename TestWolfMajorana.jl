@@ -1,7 +1,7 @@
 
 using MathLink
 
-include("MajoranaWolfReps.jl")
+include("MajoranaReps.jl")
 
 using Test
 
@@ -12,3 +12,8 @@ using Test
 
 @test W"a"*bx(1)*Ket() == W"a"*bx(1)*Ket()
 @test W"a"*W"b"*bx(1)*Ket() == W`a b`*bx(1)*Ket()
+
+
+
+####At the end also test the usual logic
+include("TestMajoranas.jl")

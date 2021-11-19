@@ -21,6 +21,8 @@ include("OpReduce.jl")
 include("OpIsLess.jl")
 include("OpScaleType.jl")
 include("OpToStr.jl")
+include("MajoranaWolfReps.jl")
+   
 
 
 MajScalar(x::Number)=MajoranaOp(x,fill(MajElem("a",1),0))
