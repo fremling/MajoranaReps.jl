@@ -112,15 +112,6 @@ function ImStr(FirstTerm,tex)
     return Str
 end
 
-
-function ScaleToStr(scale::Union{MathLink.WExpr,MathLink.WSymbol},tex::Bool,KetState::Bool,NumOps::Int,FirstTerm::Bool)
-    if FirstTerm
-        return "$(scale)*"
-    else
-        return "+ $(scale)*"
-    end
-end
-
 function ScaleToStr(scale,tex::Bool,KetState::Bool,NumOps::Int,FirstTerm::Bool)
     Str=""
     if isreal(scale)

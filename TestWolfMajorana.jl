@@ -1,3 +1,6 @@
+
+using MathLink
+
 include("MajoranaWolfReps.jl")
 
 using Test
