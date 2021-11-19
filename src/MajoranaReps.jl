@@ -1,3 +1,6 @@
+module MajoranaReps
+
+
 if !@isdefined(TabLevel)
     TabLevel = ""
 end
@@ -185,3 +188,6 @@ end
 
 TabLevel=TabLevel[1:end-4]
 println(TabLevel*"Close MajoranaReps.jl")
+
+
+end #Module
