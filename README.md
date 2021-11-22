@@ -6,8 +6,8 @@ since the package was developed with the Kitaev Honeycomb Model in mind.
 
 The vacuums thus organised such that
 
-    by(j)|0> = i*bx(j)|0>
-    bz(j)|0> = i*c(j)|0>
+    by(j)|0> == i*bx(j)|0>
+    bz(j)|0> == i*c(j)|0>
 
 And therse transforamtions are applied automatically.
 
