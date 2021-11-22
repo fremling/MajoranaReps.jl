@@ -17,7 +17,7 @@ The package supports inner products through the constructions
 
     IP = OpInnerProd(State1,Operator,State2)
 
-The package also supports the use of [MathLink](https://github.com/JuliaInterop/MathLink.jl) and [MathLinkExtras](https://github.com/fremling/MajoranaReps.jl) syntax for algebraic prefactors.
+The package also supports the use of [MathLink](https://github.com/JuliaInterop/MathLink.jl) and [MathLinkExtras](https://github.com/fremling/MathLinkExtras.jl) syntax for algebraic prefactors.
 This allows for constructions like  `W"a"*bx(1)` or ```W`-I b`*by(1)```
 
 NB: `MathLink` needs to be loaded before invoking `MajoranaReps` the first time.
