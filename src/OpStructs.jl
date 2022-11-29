@@ -4,13 +4,11 @@ end
 println(TabLevel*"Open OpStructs.jl")
 TabLevel=TabLevel*"    "
 
-
 ###Check if Mathlink is installed
 using Pkg
-InstalledPackages=(Pkg.installed()).keys
-HasMathLink=any([ isassigned(InstalledPackages,n) ?
-                  (InstalledPackages[n] == "MathLink") :
-                  false for n in 1:length(InstalledPackages) ])
+isinstalled(pkg::String) = any(x -> x.name == pkg && x.is_direct_dep, values(Pkg.dependencies()))
+HasMathLink=isinstalled("MathLink")
+
 if HasMathLink
     using MathLink ###if Mathlink is present also load it...
     WSym = MathLink.WSymbol

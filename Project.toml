@@ -4,7 +4,6 @@ authors = ["Mikael Fremling <micke.fremling@gmail.com>"]
 version = "0.1.0"
 
 [deps]
-MathLink = "18c93696-a329-5786-9845-8443133fa0b4"
 Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
 Primes = "27ebfcd6-29c5-5fa9-bf4b-fb8fc14df3ae"
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
