@@ -22,7 +22,8 @@ end
 
 function OpSqrt(x::Complex)
     if imag(x) != 0
-        throw(DomainError("OpSqrt for complex x=$x is not implemented yet. In the future this should be the principal root of $x"))
+        throw(DomainError("OpSqrt for complex x=$x is not implemented yet. "*
+                          "In the future this should be the principal root of $x"))
     else
         OpSqrt(real(x))
     end
