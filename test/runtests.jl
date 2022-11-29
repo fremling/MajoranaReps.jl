@@ -29,6 +29,15 @@ end
     @test OpSqrt(7) < 5.0
 end
 
+@testset "Ket multiplication" begin
+    @test c(1)*OpSqrt(4//5) == c(1)*2*OpSqrt(1//5)
+    @test c(1)//OpSqrt(6//5) == c(1)*OpSqrt(5//6)
+    @test c(1)//OpSqrt(6//5) == OpSqrt(5//6)*c(1)
+    @test Ket()//OpSqrt(6//5) == Ket()*OpSqrt(5//6)
+    @test Ket()//OpSqrt(6//5) == OpSqrt(5//6)*Ket()
+
+end
+
 @testset "Addition" begin
     @test OpSqrt(1,5)+OpSqrt(1,5) == 2*OpSqrt(5)
     @test OpSqrt(1,9)+OpSqrt(1,9) == 6

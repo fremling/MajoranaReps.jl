@@ -115,6 +115,7 @@ end
 
 
 import Base.//
+//(y,x::OpSqrt) = y*(1//x)
 //(x::OpSqrt,y::IntegerTypes) = x*(1//y)
 //(y::Union{OpSqrt,IntegerTypes},x::OpSqrt) = y*(inv(x))
 
