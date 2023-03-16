@@ -21,7 +21,7 @@ include("OpReduce.jl")
 include("OpIsLess.jl")
 include("OpScaleType.jl")
 include("OpToStr.jl")
-include("MajoranaWolfReps.jl")
+#include("MajoranaWolfReps.jl")
    
 
 

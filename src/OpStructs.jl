@@ -5,19 +5,19 @@ println(TabLevel*"Open OpStructs.jl")
 TabLevel=TabLevel*"    "
 
 ###Check if Mathlink is installed
-using Pkg
-isinstalled(pkg::String) = any(x -> x.name == pkg && x.is_direct_dep, values(Pkg.dependencies()))
-HasMathLink=isinstalled("MathLink")
+#using Pkg
+#isinstalled(pkg::String) = any(x -> x.name == pkg && x.is_direct_dep, values(Pkg.dependencies()))
+#HasMathLink=isinstalled("MathLink")
+#if HasMathLink
+#    using MathLink ###if Mathlink is present also load it...
+#    WSym = MathLink.WSymbol
+#    WExpr = MathLink.WExpr
+#    Scalars=Union{Number,OpSqrt,WSym,WExpr}
+#else
+#Scalars=Union{Number,OpSqrt}
+#end
 
-if HasMathLink
-    using MathLink ###if Mathlink is present also load it...
-    WSym = MathLink.WSymbol
-    WExpr = MathLink.WExpr
-    Scalars=Union{Number,OpSqrt,WSym,WExpr}
-else
-    Scalars=Union{Number,OpSqrt}
-end
-
+Scalars=Union{Number,OpSqrt}
 
 
 struct MajElem ###Define Single Majorana Element
