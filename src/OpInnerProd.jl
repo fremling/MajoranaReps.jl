@@ -4,7 +4,9 @@ end
 println(TabLevel*"Open OpInnerProd.jl")
 TabLevel=TabLevel*"    "
 
-
+"""
+Computes the inner product as OpInnerProd(State1,MiddleOp,State2)
+"""
 function OpInnerProd(State1,MiddleOp,State2)
     OpInnerProd(State1,MiddleOp*State2)
 end
