@@ -1,7 +1,7 @@
 name = "MajoranaReps"
 uuid = "4d2ab388-4915-11ec-2296-b707a6cee44b"
 authors = ["Mikael Fremling <micke.fremling@gmail.com>"]
-version = "0.1.1"
+version = "0.1.2"
 
 [deps]
 Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
