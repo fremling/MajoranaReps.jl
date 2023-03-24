@@ -1,6 +1,5 @@
 
 using MathLink
-using MathLinkExtras
 
 using MajoranaReps
 

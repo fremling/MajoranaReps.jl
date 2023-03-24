@@ -7,6 +7,7 @@ TabLevel=TabLevel*"    "
 import Base.*
 import Base.^
 
+Scalars=Union{Number,OpSqrt}
 
 *(x::MajTypes,y::MajTypes) = OpMul(x,y)
 *(x::Scalars,y::MajTypes) = OpScale(x,y)
@@ -81,11 +82,11 @@ OpMul(b::MajoranaOp,a::MajElem) = b*MajoranaOp(1,[a])
 
 ###  Methods to Make majoranas equal
 #### Scaling operators
-function OpScale(scale::Scalars)
+function OpScale(scale)
     return scale
 end
 
-function OpScale(scale::Scalars,a_in::MajoranaSp;verbose=false)
+function OpScale(scale,a_in::MajoranaSp;verbose=false)
     verbose && println("Scale $a_in by  $scale")
     if a_in.Reduced ###Reduce the Majorana first
         a = OpCopy(a_in)
@@ -98,7 +99,7 @@ function OpScale(scale::Scalars,a_in::MajoranaSp;verbose=false)
     return a
 end
 
-function OpScale(scale::Scalars,a_in::MajoranaOp;verbose=false)
+function OpScale(scale,a_in::MajoranaOp;verbose=false)
     verbose && println("Scale $a_in by  $scale")
     if scale == 0
         return 0
@@ -108,7 +109,7 @@ function OpScale(scale::Scalars,a_in::MajoranaOp;verbose=false)
     return a
 end
 
-function OpScale(scale::Scalars,a::MajElem;verbose=false)
+function OpScale(scale,a::MajElem;verbose=false)
     verbose && println("Scale $a_in by  $scale")
     if scale == 0
         return 0

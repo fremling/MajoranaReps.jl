@@ -4,29 +4,13 @@ end
 println(TabLevel*"Open OpStructs.jl")
 TabLevel=TabLevel*"    "
 
-###Check if Mathlink is installed
-#using Pkg
-#isinstalled(pkg::String) = any(x -> x.name == pkg && x.is_direct_dep, values(Pkg.dependencies()))
-#HasMathLink=isinstalled("MathLink")
-#if HasMathLink
-#    using MathLink ###if Mathlink is present also load it...
-#    WSym = MathLink.WSymbol
-#    WExpr = MathLink.WExpr
-#    Scalars=Union{Number,OpSqrt,WSym,WExpr}
-#else
-#Scalars=Union{Number,OpSqrt}
-#end
-
-Scalars=Union{Number,OpSqrt}
-
-
 struct MajElem ###Define Single Majorana Element
     ###Each majorana is characterized by a string giving the current type
     Type::String
     Index::Union{Integer,String} ###Typically an integer or maybe a string
 end
 mutable struct MajoranaOp ###Define a majoarana operator
-scale::Scalars ### The prefactor of the majorana
+scale ### The prefactor of the majorana
 OpList::Array{MajElem}###A list of Majorana Elements
 ###This could be a string and a number or something different
 KetState::Bool ###Keep tarck if this is a ket state

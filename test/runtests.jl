@@ -1,5 +1,4 @@
-#include("MajoranaReps.jl")
-
+#include("../src/MajoranaReps.jl")
 using MajoranaReps
 using Test
 
